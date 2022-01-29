@@ -1,0 +1,66 @@
+<mat-nav-list>
+<button id="logout" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Déconnexion
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Déconnecter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Voulez-vous vraiment déconnecter ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Déconnexion</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+  <div class="logo py-4">
+    <img height=125px weight=90px src="../../assets/images/logo-poulina.png" alt="Company Logo" />
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2">TimeSheet</h2>
+
+  <a  mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+    <mat-icon>home</mat-icon> Home
+  </a>
+
+  <a (click)='changetime()' class="btn btn-primary"  id='title_menu' mat-list-item routerLinkActive="list-item-active" >
+    <mat-icon >event_note</mat-icon> Mon TimeSheet <mat-icon>expand_more</mat-icon>
+  </a>
+  <a   [hidden]="!show_time" mat-list-item routerLinkActive="list-item-active" routerLink="/AccederAuTimesheet"> 
+    <mat-icon>calendar_today</mat-icon> Acceder au TimeSheet 
+  </a>
+  <a (click)='changepara()' class="btn btn-primary" mat-list-item> <mat-icon>account_circle</mat-icon> Paramétrage D'utilisateur <mat-icon>expand_more</mat-icon> </a>
+  <a [hidden]="!show_para" mat-list-item routerLinkActive="list-item-active" routerLink="/Roles"> 
+    <mat-icon>group</mat-icon> Roles 
+  </a>
+  <a [hidden]="!show_para" mat-list-item routerLinkActive="list-item-active" routerLink="/ServiceDepartment"> 
+    	<mat-icon>settings</mat-icon>  Services 
+    </a>
+  <a  [hidden]="!show_para" mat-list-item routerLinkActive="list-item-active" routerLink="/Personnage">
+     <mat-icon>person_add</mat-icon> personnage  
+    </a>
+  <a (click)='changeproj()' class="btn btn-primary" mat-list-item> <mat-icon>assignment</mat-icon> Projet et Taches <mat-icon>expand_more</mat-icon>
+  </a>
+  <a [hidden]="!show_proj" mat-list-item routerLinkActive="list-item-active" routerLink="/Projet"> 
+    <mat-icon>settings</mat-icon> Projet  
+  </a>
+  <a   [hidden]="!show_proj" mat-list-item routerLinkActive="list-item-active" routerLink="/Taches">
+     <mat-icon>settings</mat-icon> Taches 
+    </a>
+  <a  (click)='changeval()'  class="btn btn-primary" mat-list-item> <mat-icon>speaker_notes</mat-icon> TimeSheet Collaborateurs <mat-icon>expand_more</mat-icon>
+  </a>
+  <a  [hidden]="!show_val" mat-list-item routerLinkActive="list-item-active" routerLink="/ValidationTimeSheet"> 
+    	<mat-icon>event_available</mat-icon> Validation TimeSheet 
+    </a>
+    <div class="footer">
+      <small>Copyright &copy; Poulina 2022</small>
+    </div>
+</mat-nav-list>

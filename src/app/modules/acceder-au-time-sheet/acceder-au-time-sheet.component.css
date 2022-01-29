@@ -1,0 +1,21 @@
+label {
+    display: block;
+    margin:  10px;
+    font-size: 19px;
+    font-family: monospace;
+    display: inline;
+}
+
+#title{
+    text-align: center;
+}
+#btn {
+    margin-left : 10px ;
+}
+#container-date {
+    display :flex;
+}
+#start {
+    width : 600px;
+    
+}

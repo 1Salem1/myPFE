@@ -1,0 +1,42 @@
+:host {
+  padding: 5px;
+  background-color: #2c3344;
+}
+.mat-icon {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+.logo {
+  text-align: center;
+  padding: 2.6rem 1rem;
+}
+
+.mat-divider {
+  border-top-width: 2px;
+  border-color: white;
+}
+.mat-list-item {
+  color: white !important;
+  font-size: 0.8rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+}
+
+.mat-subheader {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+#logout{
+position: fixed;
+right:30px;
+
+
+}
+.footer{
+  margin-top: 50px;
+  text-align: center;
+  color: #ffffff;
+}
